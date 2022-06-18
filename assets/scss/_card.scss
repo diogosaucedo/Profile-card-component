@@ -1,0 +1,19 @@
+@use "colors";
+@use "card-profile";
+@use "card-line";
+@use "card-cover";
+@use "card-social";
+@use "members";
+
+.card {
+  @include members.custom-layout(column, center, space-between);
+
+  width: 33rem;
+  border-radius: 1rem;
+  background-color: colors.$white;
+
+  @include card-profile.properties;
+  @include card-line.properties;
+  @include card-cover.properties;
+  @include card-social.properties;
+}

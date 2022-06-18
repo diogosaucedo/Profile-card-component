@@ -1,0 +1,32 @@
+@use "base";
+@use "colors";
+@use "members";
+
+@mixin properties {
+  &__profile {
+    @include members.custom-layout(column, center, space-between);
+    height: 16rem;
+  }
+  &__profile-image {
+    border: 0.5rem solid colors.$white;
+    width: 10.5rem;
+    border-radius: 50%;
+    transform: translateY(-5rem);
+  }
+  &__profile-info {
+    @include members.custom-layout(row, center, space-between);
+    width: 14.5rem;
+    height: 5rem;
+    transform: translateY(-3rem);
+  }
+  &__profile-name {
+    @include members.custom-font(2rem, 700, colors.$very-dark-desaturated-blue);
+  }
+  &__profile-age {
+    @include members.custom-font(2rem, 400, colors.$dark-gray);
+  }
+  &__profile-city {
+    @include members.custom-font(1.6rem, 400, colors.$dark-gray);
+    transform: translateY(-2.5rem);
+  }
+}

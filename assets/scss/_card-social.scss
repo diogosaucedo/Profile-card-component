@@ -1,0 +1,19 @@
+@use "colors";
+@use "members";
+@mixin properties {
+  &__social {
+    width: 100%;
+    height: 10rem;
+    @include members.custom-layout(row, center, space-around);
+  }
+  &__social-info {
+    @include members.custom-layout(column, center, space-around);
+  }
+  &__social-value {
+    @include members.custom-font(2rem, 700, colors.$very-dark-desaturated-blue);
+  }
+  &__social-label {
+    @include members.custom-font(1rem, 400, colors.$dark-grayish-blue);
+    letter-spacing: 0.2rem;
+  }
+}

@@ -1,0 +1,13 @@
+@use "colors";
+
+@mixin properties {
+  &__line {
+    width: 100%;
+    // Box Model
+    height: 0.1rem;
+    background-color: colors.$dark-gray;
+
+    // Display
+    border: none;
+  }
+}

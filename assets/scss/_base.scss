@@ -1,0 +1,22 @@
+@use "colors";
+@use "members";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 62.2%;
+}
+
+body {
+  @include members.custom-layout(column, center, center);
+
+  width: 100vw;
+  height: 100vh;
+
+  font-family: "Kumbh Sans", sans-serif;
+
+  // === to refactor ===
+  background: colors.$dark-cyan;
+}
